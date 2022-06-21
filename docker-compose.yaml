@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  peterapp1:
+    image: petercustomer:v1
+    build: .
+    container_name: peterc1
+    ports:
+    - "1388:80"
+    restart: always
+    environment:
+      deploy: "app2"
